@@ -1,0 +1,17 @@
+.formTitleWrapper {
+    text-align: left;
+}
+
+
+.title {
+    font-size: 2rem;
+    line-height: 120%;
+    color: #022959;
+}
+
+.description {
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 150%;
+    color: #9699AA;
+}

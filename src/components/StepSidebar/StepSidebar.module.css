@@ -1,0 +1,14 @@
+.sidebar {
+    padding: 2rem;
+    background-image: url(assets/images/bg-sidebar-desktop.svg);
+    border-radius: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
