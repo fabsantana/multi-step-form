@@ -1,0 +1,10 @@
+.textInput {
+    background-color: transparent;
+    border: 1px #D6D9E6 solid;
+    border-radius: 8px;
+    padding-block: .5rem;
+}
+
+.textInputLabel {
+
+}
