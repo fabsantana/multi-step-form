@@ -13,6 +13,13 @@
     display: grid;
     place-items: center;
     font-weight: bold;
+    color:white;
+}
+
+.stepNumber.active {
+    background-color: #BEE2FD;
+    color: #022959;
+    border-color: #BEE2FD;
 }
 
 .stepNumberLabel {
@@ -25,6 +32,7 @@
     font-weight: bold;
     line-height: 120%;
     letter-spacing: 1px;
+    color: white;
 }
 
 .flexColumn {

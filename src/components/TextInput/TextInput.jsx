@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from './TextInput.module.css'
-function TextInput({type='text', label, placeholder }) {
+function TextInput({type='text', label, ...delegated }) {
   return (
-    <>
+    <div className={styles.flexColumn}>
       <label className={styles.textInputLabel}>{label}</label>
-      <input className={styles.textInput} type={type} placeholder={placeholder}></input>
-    </>
+      <input {...delegated} className={styles.textInput} type={type}></input>
+    </div>
   )
 }
 

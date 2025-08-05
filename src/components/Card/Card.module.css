@@ -1,0 +1,13 @@
+.cardName {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 120%;
+    color: #022959;
+}
+
+.cardCost {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 120%;
+    color: #9699AA;
+}

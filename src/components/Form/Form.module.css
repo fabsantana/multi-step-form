@@ -1,0 +1,10 @@
+.form {
+    padding-inline: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonGroup {
+    display: flex;
+    justify-content: space-between;
+}

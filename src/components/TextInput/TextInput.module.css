@@ -1,10 +1,21 @@
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
 .textInput {
     background-color: transparent;
     border: 1px #D6D9E6 solid;
     border-radius: 8px;
     padding-block: .5rem;
+    color: #022959;
+    padding-left: 10px;
 }
 
 .textInputLabel {
-
+    color: #022959;
+    font-size: 14px;
+    line-height: 120%;
+    text-align: left;
+    padding-bottom: 8px;
 }

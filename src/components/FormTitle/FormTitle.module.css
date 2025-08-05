@@ -1,12 +1,15 @@
 .formTitleWrapper {
     text-align: left;
+    padding-top: 1rem;
+    padding-bottom: 2.5rem;
 }
-
 
 .title {
     font-size: 2rem;
     line-height: 120%;
     color: #022959;
+    margin: unset;
+    padding-bottom: 0.5rem;
 }
 
 .description {
@@ -14,4 +17,5 @@
     font-weight: normal;
     line-height: 150%;
     color: #9699AA;
+    margin: unset;
 }

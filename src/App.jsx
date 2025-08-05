@@ -4,15 +4,17 @@ import React from 'react'
 import FormContainer from './components/FormContainer'
 import StepSidebar from './components/StepSidebar'
 import Form from './components/Form'
+import StepProvider from './components/StepProvider'
 import './App.css'
 
 function App() {
-
   return (
-    <FormContainer>
-      <StepSidebar />
-      <Form title='Select your plan' />
-    </FormContainer>
+    <StepProvider>
+      <FormContainer>
+        <StepSidebar />
+        <Form />
+      </FormContainer>
+    </StepProvider>
   )
 }
 
