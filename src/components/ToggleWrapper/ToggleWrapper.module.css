@@ -1,0 +1,20 @@
+.toggleWrapper {
+    background-color: #F8F9FF;
+    border-radius: 8px;
+    padding-block: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 5rem;
+}
+
+.toggleLabel {
+    color: #9699AA;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.active {
+    color: #022959;
+}

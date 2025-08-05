@@ -1,3 +1,23 @@
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    border: #D6D9E6 1px solid;
+    border-radius: 8px;
+    padding: 1rem;
+    flex-grow: 1;
+    flex-basis: 0;
+    cursor: pointer;
+}
+
+.cardContainer:hover {
+    border-color: #483EFF;
+}
+
+.cardIcon {
+    margin-bottom: 2.5rem;
+}
+
 .cardName {
     font-size: 1rem;
     font-weight: 500;
@@ -10,4 +30,12 @@
     font-weight: normal;
     line-height: 120%;
     color: #9699AA;
+}
+
+.radioInput {
+    appearance: none;
+}
+
+.radioInput:active {
+    background-color: #F8F9FF;
 }

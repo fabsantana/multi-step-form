@@ -4,7 +4,8 @@ import FormTitle from '../FormTitle';
 import TextInputWrapper from '../TextInputWrapper';
 import Button from '../Button/Button';
 import StepContext from '../../context/StepContext';
-import CardWrapper from '../CardWrapper'
+import CardWrapper from '../CardWrapper';
+import ToggleWrapper from '../ToggleWrapper'
 
 function Form() {
   const { step, handleGoBack, handleSubmit } = React.useContext(StepContext);
@@ -33,21 +34,7 @@ function Form() {
             description='You have the option of monthly or yearly billing.'
           />
           <CardWrapper />
-          <div className={styles.buttonGroup}>
-          <Button onClick={handleGoBack} type='button' variant='borderless'>
-            Go Back
-          </Button>
-          <Button type='submit' variant='primary'>
-            Next Step
-          </Button>
-          </div>
-        </>
-      );
-      break;
-    case 3:
-      content = (
-        <>
-          <FormTitle title='Pick add-ons' description='Add-ons help enhance your gaming experience.'/>
+          <ToggleWrapper/>
           <div className={styles.buttonGroup}>
             <Button onClick={handleGoBack} type='button' variant='borderless'>
               Go Back
@@ -57,12 +44,33 @@ function Form() {
             </Button>
           </div>
         </>
-      )
+      );
+      break;
+    case 3:
+      content = (
+        <>
+          <FormTitle
+            title='Pick add-ons'
+            description='Add-ons help enhance your gaming experience.'
+          />
+          <div className={styles.buttonGroup}>
+            <Button onClick={handleGoBack} type='button' variant='borderless'>
+              Go Back
+            </Button>
+            <Button type='submit' variant='primary'>
+              Next Step
+            </Button>
+          </div>
+        </>
+      );
       break;
     case 4:
       content = (
         <>
-          <FormTitle title='Finishing up' description='A Double-check everything looks OK before confirming.'/>
+          <FormTitle
+            title='Finishing up'
+            description='A Double-check everything looks OK before confirming.'
+          />
           <div className={styles.buttonGroup}>
             <Button onClick={handleGoBack} type='button' variant='borderless'>
               Go Back
@@ -72,7 +80,7 @@ function Form() {
             </Button>
           </div>
         </>
-      )
+      );
       break;
     default:
       content = <div>Error</div>;

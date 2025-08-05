@@ -33,3 +33,7 @@
     border: none;
     color: #9699AA;
 }
+
+.button.borderless:hover {
+    color: #022959
+}
