@@ -1,0 +1,50 @@
+.checkboxContainer {
+    border: 1px solid #D6D9E6;
+    border-radius: 8px;
+}
+
+.checkboxContainer:has(input:checked) {
+    border-color: #483EFF;
+    background-color: #F8F9FF;
+}
+
+.checkbox {
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    input {
+        background-color: transparent;
+    }
+}
+
+.flex {
+    display: flex;
+    gap: 1rem;
+}
+
+.checkboxName {
+    color: #022959;
+    font-size: 16px;
+    line-height: 120%;
+    font-weight: 500;
+    text-align: left;
+}
+
+.checkboxNameWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkboxDescription {
+    color: #9699AA;
+    font-size: 14px;
+    line-height: 120%;
+}
+
+.checkboxPrice {
+    color: #483EFF;
+    font-size: 14px;
+    line-height: 120%;
+}

@@ -10,6 +10,11 @@
     cursor: pointer;
 }
 
+.cardContainer:has(input:checked) {
+    border-color: #483EFF;
+    background-color: #F8F9FF;
+}
+
 .cardContainer:hover {
     border-color: #483EFF;
 }

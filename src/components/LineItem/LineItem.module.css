@@ -1,0 +1,15 @@
+.lineItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lineItemName {
+    color: #9699AA;
+    font-size: 14px;
+}
+
+.lineItemCost {
+    color: #022959;
+    font-size: 14px;
+}

@@ -5,15 +5,18 @@ import FormContainer from './components/FormContainer'
 import StepSidebar from './components/StepSidebar'
 import Form from './components/Form'
 import StepProvider from './components/StepProvider'
+import FormProvider from './components/FormProvider'
 import './App.css'
 
 function App() {
   return (
     <StepProvider>
-      <FormContainer>
-        <StepSidebar />
-        <Form />
-      </FormContainer>
+      <FormProvider>
+        <FormContainer>
+          <StepSidebar />
+          <Form />
+        </FormContainer>
+      </FormProvider>
     </StepProvider>
   )
 }

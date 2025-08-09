@@ -1,0 +1,8 @@
+.checkboxWrapper {
+    border: unset;
+    padding: unset;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 2rem;
+}

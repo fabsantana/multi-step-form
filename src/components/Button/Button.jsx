@@ -10,7 +10,7 @@ function Button({ children, variant, ...delegated }) {
       : styles.primary;
 
   return (
-    <button {...delegated} className={`${styles.button} ${variantClass}`}>
+    <button className={`${styles.button} ${variantClass}`} {...delegated}>
       {children}
     </button>
   );
