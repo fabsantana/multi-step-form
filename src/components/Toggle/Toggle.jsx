@@ -1,8 +1,11 @@
 import React from 'react';
 import { Switch } from 'radix-ui';
 import styles from './Toggle.module.css';
+import PlanContext from '../../context/PlanContext';
 
-function Toggle({ yearlyBilling, setYearlyBilling }) {
+function Toggle() {
+  const {yearlyBilling, setYearlyBilling} = React.useContext(PlanContext)
+
   function handleCheckedChange() {
     if (!yearlyBilling) {
       setYearlyBilling(true);

@@ -1,12 +1,25 @@
 import React from 'react';
-import styles from './TextInput.module.css'
-function TextInput({type='text', label, ...delegated }) {
+import styles from './TextInput.module.css';
+function TextInput({ type = 'text', label, ...delegated }) {
+  const [inputText, setInputText] = React.useState('');
+
+  function handleInputChange(event) {
+    setInputText(event.target.value)
+    console.log(inputText)
+  }
+
   return (
     <div className={styles.flexColumn}>
       <label className={styles.textInputLabel}>{label}</label>
-      <input {...delegated} className={styles.textInput} type={type}></input>
+      <input
+        {...delegated}
+        onChange={handleInputChange}
+        className={styles.textInput}
+        type={type}
+        value={inputText}
+      />
     </div>
-  )
+  );
 }
 
 export default TextInput;

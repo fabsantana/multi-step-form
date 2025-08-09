@@ -1,31 +1,67 @@
 import React from 'react';
 import PlanContext from '../../context/PlanContext';
 
-function FormProvider({children}) {
+function FormProvider({ children }) {
   const PLAN_OPTIONS = [
     {
       planType: 'Arcade',
-      monthlyCost: '$9',
-      yearlyCost: '$90',
+      planMonthlyCost: '$9',
+      planYearlyCost: '$90',
       id: crypto.randomUUID(),
       planIcon: '../../../assets/images/icon-arcade.svg',
     },
     {
       planType: 'Advanced',
-      monthlyCost: '$12',
-      yearlyCost: '$120',
+      planMonthlyCost: '$12',
+      planYearlyCost: '$120',
       id: crypto.randomUUID(),
       planIcon: '../../../assets/images/icon-advanced.svg',
     },
     {
       planType: 'Pro',
-      monthlyCost: '$15',
-      yearlyCost: '$150',
+      planMonthlyCost: '$15',
+      planYearlyCost: '$150',
       id: crypto.randomUUID(),
       planIcon: '../../../assets/images/icon-pro.svg',
     },
   ];
-  return <PlanContext.Provider value={{PLAN_OPTIONS}}>{children}</PlanContext.Provider>;
+
+  const ADD_ONS = [
+    {
+      addOnName: 'Online service',
+      addOnDesc: 'Access to multiplayer games',
+      addOnYearlyCost: 10,
+      addOnMonthlyCost: 1,
+      id: crypto.randomUUID(),
+    },
+    {
+      addOnName: 'Larger storage',
+      addOnDesc: 'Extra 1TB of cloud save',
+      addOnYearlyCost: 20,
+      addOnMonthlyCost: 2,
+      id: crypto.randomUUID(),
+    },
+    {
+      addOnName: 'Customizable profile',
+      addOnDesc: 'Custom theme on your profile',
+      addOnYearlyCost: 20,
+      addOnMonthlyCost: 2,
+      id: crypto.randomUUID(),
+    },
+  ];
+
+  const [yearlyBilling, setYearlyBilling] = React.useState(false);
+
+  const [selectedPlan, setSelectedPlan] = React.useState(PLAN_OPTIONS[0].planType)
+
+
+  return (
+    <PlanContext.Provider
+      value={{ PLAN_OPTIONS, ADD_ONS, yearlyBilling, setYearlyBilling, selectedPlan, setSelectedPlan }}
+    >
+      {children}
+    </PlanContext.Provider>
+  );
 }
 
 export default FormProvider;

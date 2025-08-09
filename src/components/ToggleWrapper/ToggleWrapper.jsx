@@ -1,9 +1,11 @@
 import React from 'react';
 import styles from './ToggleWrapper.module.css';
 import Toggle from '../Toggle';
+import PlanContext from '../../context/PlanContext';
 
 function ToggleWrapper() {
-  const [yearlyBilling, setYearlyBilling] = React.useState(false);
+
+  const {yearlyBilling} = React.useContext(PlanContext)
 
   return (
     <div className={styles.toggleWrapper}>
@@ -14,7 +16,7 @@ function ToggleWrapper() {
       >
         Monthly
       </span>
-      <Toggle yearlyBilling={yearlyBilling} setYearlyBilling={setYearlyBilling}/>
+      <Toggle />
       <span
         className={`${styles.toggleLabel} ${(yearlyBilling === true
           ? styles.active

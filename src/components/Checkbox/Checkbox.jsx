@@ -13,7 +13,7 @@ function Checkbox({name, description, price}) {
             <span className={styles.checkboxDescription}>{description}</span>
           </div>
         </div>
-        <span className={styles.checkboxPrice}>{`+$${price}/mo`}</span>
+        <span className={styles.checkboxPrice}>{price}</span>
       </label>
     </div>
   )
