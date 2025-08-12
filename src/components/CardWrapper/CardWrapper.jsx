@@ -12,7 +12,7 @@ function CardWrapper() {
         ({ planType, planMonthlyCost, planYearlyCost, id, planIcon }) => (
           <Card
             key={id}
-            type={planType}
+            value={planType}
             cost={
               yearlyBilling ? `${planYearlyCost}/yr` : `${planMonthlyCost}/mo`
             }

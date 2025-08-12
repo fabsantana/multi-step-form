@@ -5,7 +5,6 @@ function TextInput({ type = 'text', label, ...delegated }) {
 
   function handleInputChange(event) {
     setInputText(event.target.value)
-    console.log(inputText)
   }
 
   return (

@@ -3,7 +3,7 @@ import styles from './Card.module.css';
 import Icon from '../Icon';
 import PlanContext from '../../context/PlanContext';
 
-function Card({ cost, type, icon }) {
+function Card({ cost, value, icon }) {
   const { selectedPlan, setSelectedPlan } = React.useContext(PlanContext);
 
   function handleCardSelection(event) {
@@ -20,12 +20,12 @@ function Card({ cost, type, icon }) {
         className={styles.radioInput}
         name='planSelection'
         type='radio'
-        value={type}
-        checked={selectedPlan === type}
+        value={value}
+        checked={selectedPlan === value}
         onChange={handleCardSelection}
       />
-      <span className={styles.cardName}>{type}</span>
-      <span className={styles.cardCost}>{cost}</span>
+      <span className={styles.cardName}>{value}</span>
+      <span className={styles.cardCost}>${cost}</span>
     </label>
   );
 }

@@ -5,7 +5,7 @@ function LineItem({name, cost, ...delegated}) {
   return (
     <div className={styles.lineItem}>
       <span className={styles.lineItemName}>{name}</span>
-      <span  className={styles.lineItemCost} {...delegated}>{`+$${cost}/mo`}</span>
+      <span  className={styles.lineItemCost} {...delegated}>{cost}</span>
     </div>
   )
 }

@@ -5,22 +5,22 @@ function FormProvider({ children }) {
   const PLAN_OPTIONS = [
     {
       planType: 'Arcade',
-      planMonthlyCost: '$9',
-      planYearlyCost: '$90',
+      planMonthlyCost: 9,
+      planYearlyCost: 90,
       id: crypto.randomUUID(),
       planIcon: '../../../assets/images/icon-arcade.svg',
     },
     {
       planType: 'Advanced',
-      planMonthlyCost: '$12',
-      planYearlyCost: '$120',
+      planMonthlyCost: 12,
+      planYearlyCost: 120,
       id: crypto.randomUUID(),
       planIcon: '../../../assets/images/icon-advanced.svg',
     },
     {
       planType: 'Pro',
-      planMonthlyCost: '$15',
-      planYearlyCost: '$150',
+      planMonthlyCost: 15,
+      planYearlyCost: 150,
       id: crypto.randomUUID(),
       planIcon: '../../../assets/images/icon-pro.svg',
     },
@@ -54,10 +54,12 @@ function FormProvider({ children }) {
 
   const [selectedPlan, setSelectedPlan] = React.useState(PLAN_OPTIONS[0].planType)
 
+  const [selectedAddOn, setSelectedAddOn] = React.useState([])
+
 
   return (
     <PlanContext.Provider
-      value={{ PLAN_OPTIONS, ADD_ONS, yearlyBilling, setYearlyBilling, selectedPlan, setSelectedPlan }}
+      value={{ PLAN_OPTIONS, ADD_ONS, yearlyBilling, setYearlyBilling, selectedPlan, setSelectedPlan, selectedAddOn, setSelectedAddOn}}
     >
       {children}
     </PlanContext.Provider>
