@@ -52,14 +52,34 @@ function FormProvider({ children }) {
 
   const [yearlyBilling, setYearlyBilling] = React.useState(false);
 
-  const [selectedPlan, setSelectedPlan] = React.useState(PLAN_OPTIONS[0].planType)
+  const [selectedPlan, setSelectedPlan] = React.useState(
+    PLAN_OPTIONS[0].planType
+  );
 
-  const [selectedAddOn, setSelectedAddOn] = React.useState([])
+  const [selectedAddOn, setSelectedAddOn] = React.useState([]);
 
+  const [name, setName] = React.useState('');
+  const [email, setEmail] = React.useState('');
+  const [phone, setPhone] = React.useState('');
 
   return (
     <PlanContext.Provider
-      value={{ PLAN_OPTIONS, ADD_ONS, yearlyBilling, setYearlyBilling, selectedPlan, setSelectedPlan, selectedAddOn, setSelectedAddOn}}
+      value={{
+        PLAN_OPTIONS,
+        ADD_ONS,
+        yearlyBilling,
+        setYearlyBilling,
+        selectedPlan,
+        setSelectedPlan,
+        selectedAddOn,
+        setSelectedAddOn,
+        name,
+        setName,
+        email,
+        setEmail,
+        phone,
+        setPhone,
+      }}
     >
       {children}
     </PlanContext.Provider>

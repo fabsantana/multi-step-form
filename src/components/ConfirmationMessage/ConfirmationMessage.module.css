@@ -1,0 +1,23 @@
+.messageWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.messageTitle {
+    color: #022959;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 120%;
+}
+
+.messageContent {
+    color: #9699AA;
+    font-size: 16px;
+    line-height: 150%;
+    text-wrap: balance;
+}

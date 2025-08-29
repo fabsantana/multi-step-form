@@ -8,6 +8,7 @@ import CardWrapper from '../CardWrapper';
 import ToggleWrapper from '../ToggleWrapper'
 import CheckboxWrapper from '../CheckboxWrapper'
 import Summary from '../Summary/Summary';
+import ConfirmationMessage from '../ConfirmationMessage'
 
 function Form() {
   const { step, handleGoBack, handleSubmit } = React.useContext(StepContext);
@@ -16,7 +17,7 @@ function Form() {
   switch (step) {
     case 1:
       content = (
-        <>
+        <form onSubmit={handleSubmit} className={styles.form}>
           <FormTitle
             title='Personal info'
             description='Please provide your name, email address, and phone number.'
@@ -25,12 +26,12 @@ function Form() {
           <Button type='submit' variant='primary'>
             Next Step
           </Button>
-        </>
+        </form>
       );
       break;
     case 2:
       content = (
-        <>
+        <form onSubmit={handleSubmit} className={styles.form}>
           <FormTitle
             title='Select your plan'
             description='You have the option of monthly or yearly billing.'
@@ -45,12 +46,12 @@ function Form() {
               Next Step
             </Button>
           </div>
-        </>
+        </form>
       );
       break;
     case 3:
       content = (
-        <>
+        <form onSubmit={handleSubmit} className={styles.form}>
           <FormTitle
             title='Pick add-ons'
             description='Add-ons help enhance your gaming experience.'
@@ -64,12 +65,12 @@ function Form() {
               Next Step
             </Button>
           </div>
-        </>
+        </form>
       );
       break;
     case 4:
       content = (
-        <>
+        <form onSubmit={handleSubmit} className={styles.form}>
           <FormTitle
             title='Finishing up'
             description='A Double-check everything looks OK before confirming.'
@@ -83,17 +84,22 @@ function Form() {
               Confirm
             </Button>
           </div>
-        </>
+        </form>
       );
       break;
+    case 5:
+      content = (
+        <ConfirmationMessage title="Thank you!" content="Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com."/>
+      )
+      break;
     default:
-      content = <div>Error</div>;
+      content = <div className={styles.errorMessage}>An Error has occured. Please try again.</div>;
   }
 
   return (
-    <form onSubmit={handleSubmit} className={styles.form}>
+    <>
       {content}
-    </form>
+    </>
   );
 }
 

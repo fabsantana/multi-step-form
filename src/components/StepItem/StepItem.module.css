@@ -35,9 +35,15 @@
     color: white;
 }
 
-.flexColumn {
+.flex {
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+    .flex {
+        display: none;
+    }
 }

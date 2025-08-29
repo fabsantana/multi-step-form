@@ -3,11 +3,11 @@ import styles from './StepSidebar.module.css';
 import StepItem from '../StepItem';
 import StepContext from '../../context/StepContext';
 
-function StepSidebar() {
+function StepSidebar({className =''}) {
   const { step } = React.useContext(StepContext);
   return (
-    <aside className={styles.sidebar}>
-      <div className={styles.flexColumn}>
+    <aside className={`${styles.sidebar} ${styles[className]}`}>
+      <div className={styles.flex}>
         <StepItem step={1} active={step === 1}>
           Your Info
         </StepItem>

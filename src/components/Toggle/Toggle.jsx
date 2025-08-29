@@ -16,6 +16,7 @@ function Toggle() {
 
   return (
     <Switch.Root
+      checked = {yearlyBilling}
       onCheckedChange={handleCheckedChange}
       className={styles.switchRoot}
     >
