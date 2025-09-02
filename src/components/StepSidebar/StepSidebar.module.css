@@ -29,15 +29,15 @@
     display: grid;
     place-items: center;
     position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     background-image: url(assets/images/bg-sidebar-mobile.svg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     text-transform: uppercase;
     border-radius: unset;
-    top: 0;
-    right: 0;
-    left: 0;
   }
 
   .flex {

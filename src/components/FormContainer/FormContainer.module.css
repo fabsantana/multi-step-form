@@ -11,5 +11,8 @@
 @media screen and (max-width: 767px) {
     .formWrapper {
         padding-inline: 1.5rem;
+        margin-inline: 1.5rem;
+        margin-top: 15%;
+        min-height: unset;
     }
 }

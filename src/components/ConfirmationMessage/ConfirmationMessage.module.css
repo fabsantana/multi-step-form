@@ -21,3 +21,10 @@
     line-height: 150%;
     text-wrap: balance;
 }
+
+@media screen and (max-width: 767px) {
+    .messageWrapper {
+        width: unset;
+        padding-block: 35%;
+    }
+}
