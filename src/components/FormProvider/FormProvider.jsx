@@ -8,21 +8,21 @@ function FormProvider({ children }) {
       planMonthlyCost: 9,
       planYearlyCost: 90,
       id: crypto.randomUUID(),
-      planIcon: '../../../assets/images/icon-arcade.svg',
+      planIcon: '/icon-arcade.svg',
     },
     {
       planType: 'Advanced',
       planMonthlyCost: 12,
       planYearlyCost: 120,
       id: crypto.randomUUID(),
-      planIcon: '../../../assets/images/icon-advanced.svg',
+      planIcon: '/icon-advanced.svg',
     },
     {
       planType: 'Pro',
       planMonthlyCost: 15,
       planYearlyCost: 150,
       id: crypto.randomUUID(),
-      planIcon: '../../../assets/images/icon-pro.svg',
+      planIcon: '/icon-pro.svg',
     },
   ];
 
